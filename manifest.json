@@ -1,12 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Outlook Web Right-to-Left",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automatically sets Right-to-Left (RTL) text direction and cursor position in Outlook Web email composer.",
   "author": "Assaf",
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": [],
   "background": {
     "service_worker": "background.js"
   },
