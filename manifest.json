@@ -24,6 +24,6 @@
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
   "update_url": "https://clients2.google.com/service/update2/crx",
-  "homepage_url": "https://github.com/username/assafmail",
+  "homepage_url": "https://github.com/assafshp/Outlook-Web-Right-to-Left-Chrome-Extension",
   "minimum_chrome_version": "88"
 }
