@@ -1,12 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "Outlook Web Right-to-Left",
-  "version": "1.0.4",
-  "description": "Automatically sets Right-to-Left (RTL) text direction and cursor position in Outlook Web email composer.",
+  "name": "Outlook Web & Gemini Enterprise Right-to-Left",
+  "version": "1.1.0",
+  "description": "Applies Right-to-Left (RTL) text direction in the Outlook Web email composer and Gemini Enterprise conversations.",
   "author": "Assaf",
-  "permissions": [],
+  "permissions": ["storage"],
   "background": {
     "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   },
   "content_scripts": [
     {
@@ -17,8 +21,16 @@
         "https://outlook.cloud.microsoft.com/mail/*",
         "https://outlook.cloud.microsoft/mail/*"
       ],
-      "js": ["content.js"],
+      "js": ["common.js", "outlook.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://vertexaisearch.cloud.google/*",
+        "https://vertexaisearch.cloud.google.com/*"
+      ],
+      "js": ["common.js", "gemini.js"],
+      "run_at": "document_idle"
     }
   ],
   "icons": {
@@ -29,7 +41,6 @@
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
-  "update_url": "https://clients2.google.com/service/update2/crx",
   "homepage_url": "https://github.com/assafshp/Outlook-Web-Right-to-Left-Chrome-Extension",
   "minimum_chrome_version": "88"
 }

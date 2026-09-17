@@ -1,14 +1,14 @@
-# Privacy Policy for Outlook Web Right-to-Left Chrome Extension
+# Privacy Policy for Outlook Web & Gemini Enterprise Right-to-Left Chrome Extension
 
 ## Introduction
 
-This privacy policy explains how the Outlook Web Right-to-Left Chrome extension handles user data. We are committed to protecting your privacy and being transparent about our practices.
+This privacy policy explains how the Outlook Web & Gemini Enterprise Right-to-Left Chrome extension handles user data. We are committed to protecting your privacy and being transparent about our practices.
 
 ## Data Collection
 
-The Outlook Web Right-to-Left Chrome extension:
+The extension:
 - Does NOT collect any personal information
-- Does NOT store any user data
+- Does NOT read, store, or transmit the content of your emails or conversations
 - Does NOT track user behavior
 - Does NOT send any data to external servers
 
@@ -16,18 +16,21 @@ The Outlook Web Right-to-Left Chrome extension:
 
 The extension requires minimal permissions to function:
 
-- `activeTab`: Used only to:
-   - Detect email compose windows in Outlook
-   - Set cursor position and text direction
-   - No content is read or stored
-   - Access is temporary and only granted when needed
+- `storage`: Used only to save your two on/off preferences (whether RTL is
+  enabled for Outlook and for Gemini Enterprise). These preferences are stored
+  via Chrome's built-in settings sync and contain no personal data.
+
+The extension runs only on the declared Outlook mail hosts and on the
+`vertexaisearch.cloud.google` hosts, and only modifies the relevant on-page
+elements (the Outlook compose body and the Gemini conversation area).
 
 ## Data Storage
 
-- The extension does not use any form of storage
+- The only data stored is your two on/off preferences (`outlookEnabled`,
+  `geminiEnabled`) via `chrome.storage.sync`
+- No email or conversation content is stored or cached
 - No cookies are created
-- No local storage is used
-- No data is cached
+- No analytics or tracking data is stored
 
 ## Third-Party Services
 
@@ -53,4 +56,4 @@ This extension complies with:
 - General Data Protection Regulation (GDPR)
 - California Consumer Privacy Act (CCPA)
 
-Last updated: May 13, 2025
+Last updated: September 17, 2026

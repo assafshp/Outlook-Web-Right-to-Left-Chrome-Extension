@@ -1,7 +1,16 @@
 'use strict';
 
+// Read version from the manifest so it never drifts from the real value.
+const VERSION = (() => {
+  try {
+    return chrome.runtime.getManifest().version;
+  } catch (e) {
+    return 'unknown';
+  }
+})();
+
 const CONFIG = {
-  VERSION: '1.0.0',
+  VERSION,
   DEBUG: false
 };
 
